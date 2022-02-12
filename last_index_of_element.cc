@@ -28,5 +28,6 @@ int main()
     std::cin >> element;
     std::cout << find_last_index_of_an_element(arr, size, element);
     std::cout << std::endl;
+    delete [] arr;
     return 0;
 }
