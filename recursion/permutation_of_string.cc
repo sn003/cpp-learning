@@ -1,16 +1,16 @@
 #include <iostream>
 #include <string>
 
-void permutations_of_string(std::string str, int l)
+void permutations_of_string(std::string str, int end)
 {
-    if (str.size()-1 == l)
+    if (str.size()-1 == end)
         std::cout << str << std::endl;
 
-    for(int i = l; i < str.size(); i++)
+    for(int i = end; i < str.size(); i++)
     {
-        str[i] = str[l];
-        permutations_of_string(str, l+1);
-        str[l] = str[i];
+        std::swap(str[i], str[end]);
+        permutations_of_string(str, end+1);
+        std::swap(str[i],  str[end]);
     }
 }
 
