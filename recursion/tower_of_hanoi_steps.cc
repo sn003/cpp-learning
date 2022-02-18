@@ -7,7 +7,7 @@ void tower_of_hanoi_steps(std::string source, std::string helper, std::string de
         return;
 
     tower_of_hanoi_steps(source, destination, helper, disks-1);
-    std::cout << "Moving disk from  " << source << " to " << destination << std::endl;
+    std::cout << "Moving disk " << disks <<  " from  " << source << " to " << destination << std::endl;
     tower_of_hanoi_steps(helper, source, destination, disks-1);
 
 
@@ -17,6 +17,6 @@ int main()
 {
     int disks = 0;
     std::cin >> disks;
-    tower_of_hanoi_steps("S", "H", "D", disks);
+    tower_of_hanoi_steps("A", "B", "C", disks);
     return 0;
 }
