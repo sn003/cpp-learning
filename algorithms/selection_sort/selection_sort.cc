@@ -10,7 +10,7 @@ void selection_sort(int *arr, int size)
 {
     int i, j;
     int smaller;
-    for(i = 0; i < size; i++)
+    for(i = 0; i < size - 1; i++)
     {
         smaller = i+1;
         for(j = i + 1; j < size; j++)
